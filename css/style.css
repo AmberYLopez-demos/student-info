@@ -7,6 +7,15 @@
     width: 70%;
     margin: 50px auto;
 }
+.control-label{
+    font-style: inherit;
+
+    font-weight:700;
+
+    line-height:28px;
+
+    padding-top:0;
+}
 
 .basic {
     border: 1px solid #cccccc;
@@ -75,7 +84,7 @@ i.arrows { /*下拉箭头*/
 }
 
 .advanced-form {
-    display: none;
+    display: block;
 }
 
 .form-group span {
@@ -84,3 +93,4 @@ i.arrows { /*下拉箭头*/
     color: #b92c28;
     opacity: 0.8;
 }
+

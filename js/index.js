@@ -1,7 +1,5 @@
-$(document).ready(function () {
-
-    $('.test')[0].addEventListener('click', function () {
-
+$(function () {
+    $("input").blur(function (e) {
 
         var stuid = $('#stuid').val();
         var stuname = $('#stuname').val();
@@ -9,81 +7,53 @@ $(document).ready(function () {
         var email = $('#email').val();
         var desc = $('#desc').val();
 
-
-        function check() {
-            isStuid();
-            isName();
-            isGender();
-            isPhonenum();
-            isEmail();
-            isDesc();
-        }
-
-        //匹配学号
-        function isStuid() {
-            var pattern = /\d{8}/;
+        if (this.name == 'stuid') {
+            let pattern = /\d{8}/;
             if (stuid.match(pattern)) {
-                // $(this).next().val("");
-                alert('学号success');
-
+                document.getElementById('error').innerHTML = '';
             }
             else {
-                // $(this).next().val("请输入8位学号");
-                alert('学号error');
+                document.getElementById('stuid-error').innerHTML = '请输入8位学号';
             }
         }
 
-        //匹配姓名
-        function isName() {
-            var pattern = /\*{0,255}/;
+        if (this.name == 'stuname') {
+            let pattern = /\*{0,255}/;
             if (stuname.match(pattern)) {
-                alert('姓名success');
-
+                document.getElementById('stuname-error').innerHTML = '';
             }
             else {
-                alert('姓名error');
+                document.getElementById('stuname-error').innerHTML = '请输入正确格式';
             }
         }
-
-        /*获取一组名为(items)的radio被选中项的值*/
-        function isGender() {
-            var gender = $('input[name=gender]:checked').val(); //若未被选中 则val() = undefined
-        }
-
-        //匹配手机号码
-        function isPhonenum() {
-            var pattern = /\d{11}/;
+        if (this.name == 'phonenum') {
+            let pattern = /\d{11}/;
             if (phonenum.match(pattern)) {
-                alert('电话success');
+                document.getElementById('phonenum-error').innerHTML = '';
+
             }
             else {
-                alert('电话error');
+                document.getElementById('phonenum-error').innerHTML = '请输入11位手机号';
             }
         }
-
-        //匹配邮箱
-        function isEmail() {
-            var pattern = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if (this.name == 'email') {
+            let pattern = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
             if (email.match(pattern)) {
-                alert('邮箱success');
+                document.getElementById('email-error').innerHTML = '';
             }
             else {
-                alert('邮箱error');
+                document.getElementById('email-error').innerHTML = '请输入正确邮箱';
             }
         }
-
-        //匹配个人简介
-        function isDesc() {
-            var pattern = /\*{0,255}/;
+        if (this.name == 'desc') {
+            let pattern = /\*{0,255}/;
             if (phonenum.match(pattern)) {
-                alert('个人简介success');
+                document.getElementById('desc-error').innerHTML = '';
             }
             else {
-                alert('个人简介error');
+                document.getElementById('email-error').innerHTML = '请输入正确格式';
             }
         }
-
-        check();
     })
 });
 

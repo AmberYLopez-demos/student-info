@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    width: 70%;
+    margin: 50px auto;
+}
+
+.basic {
+    border: 1px solid #cccccc;
+    position: relative;
+    left: -15px;
+    /*padding: 0 0 0px 0;*/
+}
+
+.form-group {
+    margin-top: 30px;
+}
+
+.basic-info { /*基础信息*/
+    position: relative;
+    height: 40px;
+    border: 1px solid #cccccc;
+    border-top: 3px solid #00b3ee;
+    left: -15px;
+    background-color: #f4f4f4;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 0 0 30px;
+    font-family: "Microsoft YaHei";
+}
+
+.advanced-info { /*高级信息*/
+    position: relative;
+    height: 40px;
+    border: 1px solid #cccccc;
+    background-color: #f4f4f4;
+    border-top: 3px solid #00b3ee;
+
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 0 0 30px;
+    font-family: "Microsoft YaHei";
+}
+
+.desc { /*个人简介*/
+    border: 1px solid #cccccc;
+    position: relative;
+    left: -15px;
+    padding: 0 0 30px 0;
+    margin-top: 50px;
+
+}
+
+i.arrows { /*下拉箭头*/
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin-left: 92%;
+    margin-top: 3px;
+    background: url('../images/arrows.png');
+    cursor: pointer;
+}
+
+.open {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.advanced-form {
+    display: none;
+}
+
+.form-group span {
+    position: relative;
+    top: 5px;
+    color: #b92c28;
+    opacity: 0.8;
+}

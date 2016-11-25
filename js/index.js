@@ -7,8 +7,7 @@ $(function () {
         var email = $('#email').val();
         var desc = $('#desc').val();
 
-
-
+        //判断表单
         if (this.name == 'stuid') {
             let pattern = /\d{8}/;
             if (stuid.match(pattern) && stuid !== '') {
@@ -24,7 +23,7 @@ $(function () {
                 document.getElementById('stuname-error').innerHTML = '222';
             }
             else {
-                document.getElementById('stuname-error').innerHTML = '请输入正确格式';
+                document.getElementById('stuname-error').innerHTML = '请输入姓名';
             }
         }
 
@@ -58,6 +57,13 @@ $(function () {
                 document.getElementById('email-error').innerHTML = '请输入正确格式';
             }
         }
+    });
+//错误信息提示
+    document.getElementById('test').addEventListener('click', function () {
+        $('#errorMsg').fadeIn();
+    });
+    document.getElementsByClassName('fa-times')[0].addEventListener('click',function () {
+        $('#errorMsg').fadeOut();
     })
 });
 

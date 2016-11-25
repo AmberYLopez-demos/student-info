@@ -93,4 +93,20 @@ i.arrows { /*下拉箭头*/
     color: #b92c28;
     opacity: 0.8;
 }
-
+.btn-lg{
+    width:150px;
+    height:40px;
+}
+.button{
+    width:500px;
+    margin:50px 0 0 200px;
+}
+button:nth-child(1) {
+    margin-left:0;
+}
+button{
+    margin-left: 50px;
+}
+/*button:nth-last-child(2) {*/
+    /*margin-left:250px;*/
+/*}*/

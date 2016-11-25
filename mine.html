@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .wrap{
+        margin:10% 0 0 10% ;
+    }
+    thead {
+        background-color: #f4f4f4;
+    }
+
+    .btn {
+        margin: 0 0 0 25%;
+    }
+    .text{
+        position: absolute;
+    }
+</style>
+<body>
+<div class="wrap">
+    <div class="col-sm-10">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th>学号</th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>手机号</th>
+                <th>邮箱</th>
+                <th>修改时间</th>
+                <th>修改</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>02145001</td>
+                <td>小鸡</td>
+                <td>女</td>
+                <td>12345678910</td>
+                <td>12345678910@qq.com</td>
+                <td>11/25</td>
+                <td>
+                    <a href="#" class="btn btn-primary" role="button">修改</a>
+                </td>
+            </tr>
+            <tr>
+                <td>02145001</td>
+                <td>小鸡</td>
+                <td>女</td>
+                <td>12345678910</td>
+                <td>12345678910@qq.com</td>
+                <td>11/25</td>
+                <td>
+                    <a href="#" class="btn btn-primary" role="button">修改</a>
+                </td>
+            </tr>
+            <tr>
+                <td>02145001</td>
+                <td>小鸡</td>
+                <td>女</td>
+                <td>12345678910</td>
+                <td>12345678910@qq.com</td>
+                <td>11/25</td>
+                <td>
+                    <a href="#" class="btn btn-primary" role="button">修改</a>
+                </td>
+            </tr>
+            <tr>
+                <td>02145001</td>
+                <td>小鸡</td>
+                <td>女</td>
+                <td>12345678910</td>
+                <td>12345678910@qq.com</td>
+                <td>11/25</td>
+                <td>
+                    <a href="#" class="btn btn-primary" role="button">修改</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="text">共<span class="num"></span>条记录</div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        var num = $('tr').length - 1;
+        $('.num')[0].innerHTML=num;
+    })
+</script>
+</body>
+</html>

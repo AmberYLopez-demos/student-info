@@ -11,19 +11,20 @@ $(function () {
         if (this.name == 'stuid') {
             let pattern = /\d{8}/;
             if (stuid.match(pattern) && stuid !== '') {
-                document.getElementById('error').innerHTML = '';
+                document.getElementById('stuid-error').innerHTML = '';
             }
             else {
                 document.getElementById('stuid-error').innerHTML = '请输入8位学号';
             }
         }
+
         if (this.name == 'stuname') {
-            let pattern = /\*{1,255}/;
+            let pattern = /\*{0,255}/;
             if (stuname.match(pattern) && stuname!=='') {
-                document.getElementById('stuname-error').innerHTML = '222';
+                document.getElementById('stuname-error').innerHTML = '';
             }
             else {
-                document.getElementById('stuname-error').innerHTML = '请输入姓名';
+                document.getElementById('stuname-error').innerHTML = '请输入正确格式';
             }
         }
 
@@ -54,10 +55,11 @@ $(function () {
                 document.getElementById('desc-error').innerHTML = '';
             }
             else {
-                document.getElementById('email-error').innerHTML = '请输入正确格式';
+                document.getElementById('desc-error').innerHTML = '请输入正确格式';
             }
         }
     });
+
 //错误信息提示
     document.getElementById('test').addEventListener('click', function () {
         $('#errorMsg').fadeIn();

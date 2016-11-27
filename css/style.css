@@ -12,7 +12,7 @@
     opacity: 0.7;
     margin-bottom: 50px;
     z-index: 1;
-    display: none;
+    display: block;
 }
 #errorMsg span {
     position: absolute;

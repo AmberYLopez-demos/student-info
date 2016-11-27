@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f2f5fa;
+            font-family: "Microsoft YaHei";
+        }
+
+        ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-nav { /*顶部导航*/
+            width: 100%;
+            height: 40px;
+            margin-left: -10px;
+            background-color: #ffffff;
+        }
+
+        .nav {
+            width: 100%;
+            background-color: #ffffff;
+
+        }
+
+        .nav-pills {
+            width: 100%;
+        }
+
+        .container { /*中间内容*/
+            width: 80%;
+            height: 600px;
+            /*margin: 50px 20% 0 0;*/
+            margin: 30px auto;
+            /*background-color: #b92c28;*/
+            /*border: 1px solid #cccccc;*/
+        }
+
+        .left { /*左侧部分*/
+            position: absolute;
+            left: 10%;
+            width: 15%;
+            /*background-color: #00b3ee;*/
+        }
+
+        .personal { /*个人中心*/
+            width: 100%;
+            height: 220px;
+            padding: 10px;
+            background-color: #f7fbfe;
+            font-family: "Microsoft YaHei";
+            border-bottom: 1px dashed #cccccc;
+            /*border:1px solid #5cb85c;*/
+        }
+
+        .personal .title {
+            font-weight: 500;
+            font-size: 18px;
+            letter-spacing: 2px;
+            margin: 5px 0 0 10px;
+        }
+
+        .personal .photo img { /*头像*/
+            width: 40%;
+            height: 70px;
+            border-radius: 50%;
+            border: 1px solid #cccccc;
+            margin: 10px 0 0 10px;
+            /*margin-right:10px;*/
+
+        }
+
+        .personal .photo span {
+            font-size: 16px;
+            font-weight: 500;
+            margin-left: 5px;
+        }
+
+        .personal .credits {
+            font-size: 13px;
+            font-weight: 500;
+            /*margin-top:10px;*/
+            margin: 15px 0 0 10px;
+        }
+
+        .nav-stacked {
+            background-color: #f7fbfe;
+            color: #333333;
+        }
+        .nav-stacked li .active {
+            background-color: #ffffff;
+        }
+        .nav-stacked li{
+            background-color: #f7fbfe;
+        }
+
+        .nav-stacked li a {
+            color: #555;
+            font-size:15px;
+        }
+
+        .right { /*右侧内容显示区*/
+            position: absolute;
+            left: 25%;
+            width: 65%;
+            height: 100%;
+            /*padding: 20px;*/
+            background-color: #f7fbfe;
+        }
+
+        .right .tab-menu { /*选择选项*/
+            font-weight: 600;
+            font-size: 17px;
+            color: #555;
+            font-family: "Microsoft JhengHei Light";
+            background-color: #ffffff;
+            padding: 20px 0 0 25px;
+
+        }
+
+        .tab-nav { /*选项卡*/
+            width: 100%;
+            padding: 20px 0 0 25px;
+            padding-right: 70%;
+            background-color: #ffffff;
+
+        }
+
+        .right-container { /*右下显示内容*/
+            background-color: #ffffff;
+            padding: 25px;
+        }
+
+        .personal-info { /*个人信息*/
+            display: block;
+        }
+
+        .recently-operation-record {
+            display: none;
+            background-color: #ffffff;
+            /*padding: 20px;*/
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class='top-nav'>
+        <ul class="nav nav-pills">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">XXX</a></li>
+            <li><a href="#">XX</a></li>
+            <li><a href="#">XXXXX</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    XX <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">X</a></li>
+                    <li><a href="#">X</a></li>
+                    <li><a href="#">X</a></li>
+                </ul>
+            </li>
+            <li><a href="#">XX</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="left">
+            <div class="personal">
+                <div class="title">个人中心</div>
+                <div class="photo"><img src="images/head-photo.jpg"/> <span>Hi,mao</span></div>
+                <div class="credits">积分/排名：</div>
+                <div class="credits">我的主页：</div>
+            </div>
+            <div class="left-nav">
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="#">最近操作记录</a></li>
+                    <li><a href="#">个人信息</a></li>
+                    <li><a href="#">认证</a></li>
+                    <li><a href="#">个人简历</a></li>
+                    <li class="active"><a href="#">消息管理</a></li>
+                    <li><a href="#">积分</a></li>
+                    <li><a href="#">我的兑换</a></li>
+                    <li><a href="#">我的论文</a></li>
+                    <li><a href="#">我的RAM张号</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="tab-menu">最近操作记录</div>
+            <div class="tab-nav">
+                <ul class="nav nav-tabs nav-justified">
+                    <li class="active"><a href="#">XX</a></li>
+                    <li><a href="#">XX</a></li>
+                </ul>
+            </div>
+            <div class="right-container">
+                <!--最近操作记录-->
+                <table class="table table-bordered recently-operation-record">
+                    <thead>
+                    <tr>
+                        <th>学号</th>
+                        <th>姓名</th>
+                        <th>性别</th>
+                        <th>手机号</th>
+                        <th>邮箱</th>
+                        <th>修改时间</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>02145001</td>
+                        <td>张三</td>
+                        <td>女</td>
+                        <td>12345678910</td>
+                        <td>test@qq.com</td>
+                        <td>2016/11/24</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <!--个人信息-->
+                <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th>学号</th>
+                        <th>姓名</th>
+                        <th>性别</th>
+                        <th>手机号</th>
+                        <th>邮箱</th>
+                        <th>修改时间</th>
+                    </tr>
+                    </thead>
+                    <tbody id="personalDate">
+                    </tbody>
+                </table>
+                <div class="record">共<span class="num"></span>条记录</div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        var studentDate = [{
+            "stuid": "02145001",
+            "stuname": "张三",
+            "gender": "女",
+            "phonenum": "12345678910",
+            "email": "12345678910@qq.com",
+            "changeTime": "2016/11/24",
+        }
+        ];
+
+        $('.num')[0].innerHTML = studentDate.length;
+        //
+        function initStudentTable() {
+            let html = '';
+            for (let j in studentDate) {
+                var obj = studentDate[j];
+                html += '<tr>';
+                html += '<td>' + obj.stuid + '</td>';
+                html += '<td>' + obj.stuname + '</td>';
+                html += '<td>' + obj.gender + '</td>';
+                html += '<td>' + obj.phonenum + '</td>';
+                html += '<td>' + obj.email + '</td>';
+                html += '<td>' + obj.changeTime + '</td>';
+                html += '</tr>';
+            }
+            $('#personalDate').append(html);
+        }
+
+        initStudentTable();
+
+    })
+</script>
+</body>
+</html>

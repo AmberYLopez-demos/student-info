@@ -7,7 +7,6 @@
     <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
     <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
-
     <style>
         body {
             margin: 0;
@@ -52,6 +51,8 @@
             left: 10%;
             width: 15%;
             /*background-color: #00b3ee;*/
+            /*border: 1px solid #a94442;*/
+
         }
 
         .personal { /*个人中心*/
@@ -70,8 +71,11 @@
             letter-spacing: 2px;
             margin: 5px 0 0 10px;
         }
+        .personal .head-photo{
+            width:100%;
+        }
 
-        .personal .photo img { /*头像*/
+        .personal .head-photo img { /*头像*/
             width: 40%;
             height: 70px;
             border-radius: 50%;
@@ -81,16 +85,16 @@
 
         }
 
-        .personal .photo span {
+        .personal .head-photo span {
             font-size: 16px;
             font-weight: 500;
             margin-left: 5px;
+            width:60%;
         }
 
         .personal .credits {
             font-size: 13px;
             font-weight: 500;
-            /*margin-top:10px;*/
             margin: 15px 0 0 10px;
         }
 
@@ -98,16 +102,25 @@
             background-color: #f7fbfe;
             color: #333333;
         }
-        .nav-stacked li .active {
+
+        .left-nav .nav-stacked li:hover {
             background-color: #ffffff;
         }
-        .nav-stacked li{
+
+        .left-nav .nav-stacked li {
             background-color: #f7fbfe;
         }
 
-        .nav-stacked li a {
+        .left-nav .nav-stacked li:hover {
+            background-color: #ffffff;
+        }
+
+        .left-nav .nav-stacked li a {
             color: #555;
-            font-size:15px;
+            font-size: 15px;
+        }
+        .left-nav .nav-stacked li a:hover {
+            background-color: #ffffff;
         }
 
         .right { /*右侧内容显示区*/
@@ -119,7 +132,7 @@
             background-color: #f7fbfe;
         }
 
-        .right .tab-menu { /*选择选项*/
+        .right .tab-menu { /*选择的菜单*/
             font-weight: 600;
             font-size: 17px;
             color: #555;
@@ -129,29 +142,107 @@
 
         }
 
-        .tab-nav { /*选项卡*/
+        .personal-info { /*个人信息，姓名，学号，，，*/
             width: 100%;
-            padding: 20px 0 0 25px;
-            padding-right: 70%;
+            height: 500px;
+            padding: 50px 0 0 25px;
             background-color: #ffffff;
+            font-size: 17px;
+            font-family: "Microsoft JhengHei Light";
+
+
+        }
+        .personal-info label{
+            color: #2e6da4;
+            font-size: 16px;
 
         }
 
-        .right-container { /*右下显示内容*/
-            background-color: #ffffff;
-            padding: 25px;
+        .stuid {
+            position: absolute;
+            width: 210px;
+            height: 30px;
+            border-left: 1px solid #cccccc;
+            padding: 5px 0 0 8px;
         }
 
-        .personal-info { /*个人信息*/
-            display: block;
+        .stuname {
+            position: absolute;
+            width: 210px;
+            left: 35%;
+            height: 30px;
+            border-left: 1px solid #cccccc;
+            padding: 5px 0 0 8px;
+        }
+        .personal-info .photo img{
+            position: absolute;
+            width: 150px;
+            left: 70%;
+            height: 150px;
+            border-left: 1px solid #cccccc;
+            /*padding: 5px 0 0 8px;*/
         }
 
-        .recently-operation-record {
-            display: none;
-            background-color: #ffffff;
-            /*padding: 20px;*/
+        .gender {
+            position: absolute;
+            width: 210px;
+            top: 200px;
+            height: 30px;
+            border-left: 1px solid #cccccc;
+            padding: 5px 0 0 8px;
+        }
+        .phonenum {
+            position: absolute;
+            width: 210px;
+            top: 200px;
+            left: 35%;
+            height: 30px;
+            border-left: 1px solid #cccccc;
+            padding: 5px 0 0 8px;
         }
 
+        .email {
+            position: absolute;
+            width: 210px;
+            top: 300px;
+            height: 30px;
+            border-left: 1px solid #cccccc;
+            padding: 5px 0 0 8px;
+        }
+        .isstudent{
+            position: absolute;
+            width: 210px;
+            top: 300px;
+            left: 35%;
+            height: 30px;
+            border-left: 1px solid #cccccc;
+            padding: 5px 0 0 8px;
+        }
+        .school{
+            position: absolute;
+            width: 210px;
+            top: 400px;
+            height: 30px;
+            border-left: 1px solid #cccccc;
+            padding: 5px 0 0 8px;
+        }
+        .graduate{
+            position: absolute;
+            width: 210px;
+            top: 400px;
+            left: 35%;
+            height: 30px;
+            border-left: 1px solid #cccccc;
+            padding: 5px 0 0 8px;
+        }
+        .education{
+            position: absolute;
+            width: 210px;
+            top: 500px;
+            height: 30px;
+            border-left: 1px solid #cccccc;
+            padding: 5px 0 0 8px;
+        }
     </style>
 </head>
 <body>
@@ -180,17 +271,17 @@
         <div class="left">
             <div class="personal">
                 <div class="title">个人中心</div>
-                <div class="photo"><img src="images/head-photo.jpg"/> <span>Hi,mao</span></div>
+                <div class="head-photo"><img src="images/head-photo.jpg"/><span>Hi,mao<span id="username"></span></span></span></div>
                 <div class="credits">积分/排名：</div>
                 <div class="credits">我的主页：</div>
             </div>
             <div class="left-nav">
                 <ul class="nav nav-pills nav-stacked">
-                    <li class="active"><a href="#">最近操作记录</a></li>
+                    <li><a href="recently-operation-record.html">最近操作记录</a></li>
                     <li><a href="#">个人信息</a></li>
                     <li><a href="#">认证</a></li>
                     <li><a href="#">个人简历</a></li>
-                    <li class="active"><a href="#">消息管理</a></li>
+                    <li><a href="#">消息管理</a></li>
                     <li><a href="#">积分</a></li>
                     <li><a href="#">我的兑换</a></li>
                     <li><a href="#">我的论文</a></li>
@@ -200,93 +291,23 @@
         </div>
 
         <div class="right">
-            <div class="tab-menu">最近操作记录</div>
-            <div class="tab-nav">
-                <ul class="nav nav-tabs nav-justified">
-                    <li class="active"><a href="#">XX</a></li>
-                    <li><a href="#">XX</a></li>
-                </ul>
+            <div class="tab-menu">个人信息</div>
+            <div class="personal-info">
+                <div class="stuid"><label>学号：</label><span id="stuid">02145001</span></div>
+                <div class="stuname"><label>姓名：</label><span id="stuname">张三</span></div>
+                <div class="photo"><img src="images/head-photo.jpg"></div>
+                <div class="gender"><label>性别：</label><span id="gender">女</span></div>
+                <div class="phonenum"><label>手机号：</label><span id="phonenum">12346578910</span></div>
+                <div class="email"><label>邮箱：</label><span id="email">test@qq.com</span></div>
+                <div class="isstudent"><label>是否为在校学生：</label><span id="isstudent">是</span></div>
+                <div class="school"><label>所在学校：</label><span id="school">西安邮电大学</span></div>
+                <div class="graduate"><label>毕业时间：</label><span id="graduate">2018-6-30</span></div>
+                <div class="education"><label>学历：</label><span id="education">本科</span></div>
             </div>
-            <div class="right-container">
-                <!--最近操作记录-->
-                <table class="table table-bordered recently-operation-record">
-                    <thead>
-                    <tr>
-                        <th>学号</th>
-                        <th>姓名</th>
-                        <th>性别</th>
-                        <th>手机号</th>
-                        <th>邮箱</th>
-                        <th>修改时间</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>02145001</td>
-                        <td>张三</td>
-                        <td>女</td>
-                        <td>12345678910</td>
-                        <td>test@qq.com</td>
-                        <td>2016/11/24</td>
-                    </tr>
-                    </tbody>
-                </table>
-
-                <!--个人信息-->
-                <table class="table table-bordered table-hover">
-                    <thead>
-                    <tr>
-                        <th>学号</th>
-                        <th>姓名</th>
-                        <th>性别</th>
-                        <th>手机号</th>
-                        <th>邮箱</th>
-                        <th>修改时间</th>
-                    </tr>
-                    </thead>
-                    <tbody id="personalDate">
-                    </tbody>
-                </table>
-                <div class="record">共<span class="num"></span>条记录</div>
-            </div>
-
         </div>
     </div>
 </div>
 
-<script>
-    $(document).ready(function () {
-        var studentDate = [{
-            "stuid": "02145001",
-            "stuname": "张三",
-            "gender": "女",
-            "phonenum": "12345678910",
-            "email": "12345678910@qq.com",
-            "changeTime": "2016/11/24",
-        }
-        ];
 
-        $('.num')[0].innerHTML = studentDate.length;
-        //
-        function initStudentTable() {
-            let html = '';
-            for (let j in studentDate) {
-                var obj = studentDate[j];
-                html += '<tr>';
-                html += '<td>' + obj.stuid + '</td>';
-                html += '<td>' + obj.stuname + '</td>';
-                html += '<td>' + obj.gender + '</td>';
-                html += '<td>' + obj.phonenum + '</td>';
-                html += '<td>' + obj.email + '</td>';
-                html += '<td>' + obj.changeTime + '</td>';
-                html += '</tr>';
-            }
-            $('#personalDate').append(html);
-        }
-
-        initStudentTable();
-
-    })
-</script>
 </body>
 </html>

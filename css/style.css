@@ -41,27 +41,27 @@
 }
 .wrap {
     position: relative;
-    width: 70%;
-    margin-top: 5%;
-    margin-left: 15%;
+    width: 65%;
+    margin-top: 4%;
+    margin-left: 18%;
 }
 
 .control-label {
-    font-style: inherit;
     font-weight: 700;
     line-height: 28px;
     padding-top: 0;
+    text-align:left
 }
 
 .basic {
     border: 1px solid #cccccc;
     position: relative;
     left: -15px;
-    /*padding: 0 0 0px 0;*/
 }
 
 .form-group {
-    margin-top: 30px;
+    margin-top: 20px;
+    position: relative;
 }
 
 .basic-info { /*基础信息*/
@@ -78,13 +78,23 @@
     font-family: "Microsoft YaHei";
 }
 
+
+.essential{/*星号*/
+    width:14px;
+    height:14px;
+    background: url("../images/star.png");
+    background-size: contain;
+    position: absolute;
+    top:13px;
+    left:68px;
+}
+
 .advanced-info { /*高级信息*/
     position: relative;
     height: 40px;
     border: 1px solid #cccccc;
     background-color: #f4f4f4;
     border-top: 3px solid #00b3ee;
-
     font-size: 16px;
     font-weight: 700;
     padding: 8px 0 0 30px;
@@ -95,8 +105,7 @@
     border: 1px solid #cccccc;
     position: relative;
     left: -15px;
-    padding: 0 0 30px 0;
-    margin-top: 50px;
+    margin-top: 30px;
 
 }
 
@@ -108,20 +117,16 @@ i.arrows { /*下拉箭头*/
     margin-top: 3px;
     background: url('../images/arrows.png');
     cursor: pointer;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
 
 .open {
-    -webkit-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    -o-transform: rotate(270deg);
-    transform: rotate(270deg);
-    -webkit-transition: all 0.25s ease;
-    -o-transition: all 0.25s ease;
-    transition: all 0.25s ease;
-}
-
-.advanced-form {
-    display: block;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
 }
 
 .form-group span {
@@ -137,8 +142,10 @@ i.arrows { /*下拉箭头*/
 }
 
 .button {
+    position: relative;
+    top:70px;
     width: 500px;
-    margin: 50px 0 0 200px;
+    margin: 120px 0 0 200px;
 }
 
 button:nth-child(1) {
@@ -147,4 +154,20 @@ button:nth-child(1) {
 
 button {
     margin-left: 50px;
+}
+#brief{
+    position: absolute;
+    width:100%;
+    display: block;
+    height: 42px;
+    overflow: hidden;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#advanced-form{
+    position: absolute;
+    height:0px;
+    width:100%;
+    top:19px;
 }
